@@ -61,12 +61,19 @@ class Main {
      * returned if element not found.
      */
     public static int binarySearch(int[] array, int numToFind, int start, int end) {
-        return -1;
+        int middle = (start + end)/2;
+
+        if(end < start) return -1;
+        else if (numToFind < array[middle])
+            return binarySearch(array, numToFind,start, middle-1);
+        else if (numToFind > array[middle])
+            return binarySearch(array, numToFind,middle + 1, end);
+        else return middle;
     }
 
     public static void main(String[] args) {
-        final long runs = 1000;
-        //final long runs = 1000000;
+        //final long runs = 1000;
+        final long runs = 1000000;
 
       int[] testarray = {1,2,3,4,5,6,7,8};
       System.out.println(linearSearch(testarray, 7));
