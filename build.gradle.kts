@@ -1,9 +1,11 @@
 plugins {
     id("java")
+    application
+    `java-library`
 }
 
 group = "org.example"
-version = "1.0-SNAPSHOT"
+version = "0.1"
 
 repositories {
     mavenCentral()
@@ -16,4 +18,14 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+application {
+    mainClass = "org.example.Main"
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "org.example.Main"
+    }
 }

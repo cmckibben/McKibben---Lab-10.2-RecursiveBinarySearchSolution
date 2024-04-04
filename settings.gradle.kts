@@ -1,2 +1,2 @@
-rootProject.name = "RecursiveBinarySearch"
+//rootProject.name = "SampleJava"
 

@@ -65,8 +65,8 @@ class Main {
     }
 
     public static void main(String[] args) {
-        //final long runs = 1000;
-        final long runs = 1000000;
+        final long runs = 1000;
+        //final long runs = 1000000;
 
       int[] testarray = {1,2,3,4,5,6,7,8};
       System.out.println(linearSearch(testarray, 7));
